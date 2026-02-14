@@ -32,9 +32,9 @@ def calculate():
 def showResult():
     getInput()
     calculate()
-    print("process   Arival Time   Burst Time   completion Time   TAT time   waiting Time ")
+    print("process\tArival\tBurst\tcomT1\tTAT\twaiting")
     for i in range(proNum):
-        print(f"  {process[i]}           {arivalTime[i]}            {burstTime[i]}               {completionTime[i]}             {tat[i]}           {waitingTime[i]} ")
+        print(f"{process[i]}\t{arivalTime[i]}\t{burstTime[i]}\t{completionTime[i]} \t{tat[i]} \t{waitingTime[i]} ")
 
 
 showResult()
