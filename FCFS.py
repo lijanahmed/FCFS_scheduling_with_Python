@@ -1,5 +1,4 @@
 # First come first serve
-
 process=[]
 arivalTime = []
 burstTime = []
@@ -9,8 +8,7 @@ waitingTime= []
 
 proNum= int(input("Enter the process number: "))
 
-def getInput():
-    
+def getInput():    
     for i in range(proNum):
         procName= input(f"Enter process{i+1} name: ")
         process.append(procName)
@@ -24,18 +22,15 @@ def calculate():
     for i in range(proNum):
         comTime+= burstTime[i]
         completionTime.append(comTime)
-
         tat.append(completionTime[i]- arivalTime[i])
         waitingTime.append(tat[i]- burstTime[i])
-
-
+        
 def showResult():
     getInput()
     calculate()
-    print("process\tArival\tBurst\tcomT1\tTAT\twaiting")
+    print("process\tArival\tBurst\tcomT\tTAT\twaiting")
     for i in range(proNum):
-        print(f"{process[i]}\t{arivalTime[i]}\t{burstTime[i]}\t{completionTime[i]} \t{tat[i]} \t{waitingTime[i]} ")
-
-
+        print(f"{process[i]}\t{arivalTime[i]}\t{burstTime[i]}"
+            f"\t{completionTime[i]}\t{tat[i]}\t{waitingTime[i]}")
+       
 showResult()
-
