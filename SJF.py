@@ -1,4 +1,4 @@
-#SJF
+
 n = int(input("Enter the process number: "))
 process = []
 Bt=[]
